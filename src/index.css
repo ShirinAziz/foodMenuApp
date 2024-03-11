@@ -10,3 +10,11 @@ body {
 .custom-btn {
   @apply flex-row relative justify-center items-center py-2 px-6 outline-none;
 }
+.dot {
+  height: 12px;
+  width: 12px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  animation: pulse 1.5s infinite ease-in-out;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Recipes from "./Recipes";
 
 const Home = () => {
   return (
@@ -13,6 +14,9 @@ const Home = () => {
         }
         type="home"
       />
+      <div id="recipes" className="md:max-w-[1440px] ">
+        <Recipes />
+      </div>
     </main>
   );
 };
