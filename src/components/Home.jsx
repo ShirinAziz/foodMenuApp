@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Recipes from "./Recipes";
+import Categories from "./Categories";
 
 const Home = () => {
   return (
@@ -9,13 +9,13 @@ const Home = () => {
         title={
           <p>
             Taste the World with
-            <br /> Flavor...
+            <br /> WorldFlavors
           </p>
         }
         type="home"
       />
       <div id="recipes" className="md:max-w-[1440px] ">
-        <Recipes />
+        <Categories />
       </div>
     </main>
   );

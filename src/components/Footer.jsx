@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-20 lg:px-20 py-20 flex flex-col gap-10 md:flex-row justify-between border-t border-slate-800">
         <div className="flex">
           <p className="font-bold text-center">
-            Food<span className="text-green-500 text-xl">Flavors</span>
+            World<span className="text-green-500 text-xl">Flavors</span>
           </p>
         </div>
 
@@ -71,7 +71,7 @@ const Footer = () => {
           md:block bg-transparent 
           border border-beige 
           hover:bg-beige 
-          hover:text-black 
+          hover:text-slate-700 
           rounded-md min-w-[130px]"
           />
         </div>

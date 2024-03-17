@@ -1,9 +1,8 @@
 import React from "react";
 import img1 from "/public/img1.jpeg";
 import img2 from "/public/img2.jpeg";
-import img3 from "/public/img3.jpeg";
 
-const images = [img1, img2, img3];
+const images = [img1, img2];
 
 const Header = ({ title, image, type }) => {
   return (
@@ -18,8 +17,8 @@ const Header = ({ title, image, type }) => {
       <div className="absolute w-full h-full bg-gradient-to-t from-black to-transparent top-0 z-8 flex flex-col items-center justify-center pt-40 2xl:pt-20 px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-center">{title}</h1>
         {type && (
-          <p className="text-sm mt-4 text-center text-green-500 bg-[#00000090] px-6 py-4">
-            Welcome to Flavor..., your passport to culinary adventures!{" "}
+          <p className="text-sm mt-4 text-center bg-[#00000090] px-6 py-4">
+            Welcome to WorldFlavor, your passport to culinary adventures!{" "}
             <br className="hidden md:block" /> Discover a treasure trove of
             delectable recipes from around the globe.
           </p>
