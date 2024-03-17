@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
 import { Link, useParams } from "react-router-dom";
 
-// 1: läsa categorynamn från länk, 2:
-
 const Menu = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({});
@@ -46,7 +44,7 @@ const Menu = () => {
                 <img
                   src={item.strMealThumb}
                   alt=""
-                  className="rounded-lg  h-[200px] md:h-[150px] w-full p-3"
+                  className="rounded-lg h-[200px] md:h-[150px] w-full p-3"
                 />
               </div>
               <div className="p-3">
