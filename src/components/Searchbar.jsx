@@ -47,7 +47,7 @@ const Searchbar = () => {
 
         {searchResultData && (
           <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 px-0 lg:px-10 py-10">
-            {searchResult.meals.map((meal) => {
+            {searchResultData.meals.map((meal) => {
               return (
                 <div key={meal.idMeal}>
                   <div className="w-full">
