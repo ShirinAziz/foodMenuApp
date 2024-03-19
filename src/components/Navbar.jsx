@@ -3,15 +3,15 @@ import Logo from "/public/Logo.jpeg";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="w-full bg-black relative z-10">
+    <div className="w-full bg-black fixed z-10">
       <div className="mx-auto w-full flex justify-between items-center p-4">
         <Link
-          href="/"
+          to="/"
           className="flex items-center justify-center gap-2 text-lg cursor-pointer"
         >
           <img
@@ -29,10 +29,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/recipes">Explore</Link>
-          </li>
-          <li>
-            <Link to="/favorites">Favorites</Link>
+            <a href="/#menu">Explore</a>
           </li>
         </ul>
         <Button
@@ -56,8 +53,7 @@ const Navbar = () => {
         } bg-black flex-col w-full px-4 pt-16 pb-10 gap-6 text-[14px]`}
       >
         <Link to="/">Home</Link>
-        <Link to="/recipes">Recipes</Link>
-        <Link to="/favorites">Favorites</Link>
+        <a href="/#menu">Explore</a>
       </div>
     </div>
   );

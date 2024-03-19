@@ -10,6 +10,15 @@ body {
 .custom-btn {
   @apply flex-row relative justify-center items-center py-2 px-6 outline-none;
 }
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
 .dot {
   height: 12px;
   width: 12px;

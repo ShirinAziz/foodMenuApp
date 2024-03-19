@@ -35,11 +35,13 @@ const Menu = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 px-0 lg:px-10 py-10">
         {data.meals.map((item) => {
           return (
             <Link to={`/recipedetail/${item.idMeal}`} key={item.idMeal}>
+              <div className="h-[100px]"></div>
+
               <div className="w-full">
                 <img
                   src={item.strMealThumb}
@@ -54,7 +56,7 @@ const Menu = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
