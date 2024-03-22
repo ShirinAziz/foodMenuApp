@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
 import { Link, useParams } from "react-router-dom";
-import Searchbar from "./Searchbar";
 
 const Menu = () => {
   const [loading, setLoading] = useState(true);
@@ -38,7 +37,6 @@ const Menu = () => {
   return (
     <div>
       <div className="h-[100px]"></div>
-      <Searchbar />
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 px-0 lg:px-10 py-10">
         {data.meals.map((item) => {
           return (

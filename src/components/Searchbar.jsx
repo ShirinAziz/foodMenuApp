@@ -1,37 +1,23 @@
 import React, { useState } from "react";
 import Loading from "./Loading";
 import { BiSearchAlt2 } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Searchbar = () => {
-  const [loading, setLoading] = useState(false);
   const [userInput, setUserInput] = useState("");
-  const [searchResultData, setSearchResultData] = useState(null); // Använd en separat tillståndsvariabel för att lagra API-svar
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      setLoading(true);
-      const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`
-      );
-      const data = await response.json();
-      setSearchResultData(data); // Uppdatera tillståndet för API-svar
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false); // Återställ laddningstillståndet när fetch-förfrågan är klar
-    }
+    navigate(`search?result=${userInput}`);
   };
 
-  if (loading) {
-    return <Loading />;
-  }
   return (
     <div>
-      <div className="w-full flex flex-col items-center justify-center pt-10 pb-5 px-0 md:px-10">
-        <form onSubmit={handleSubmit} className="w-full lg:w-2/4">
+      <div className="">
+        <form onSubmit={handleSubmit} className="w-full lg:w-[500px]">
           <div className="relative">
             <input
               type="text"
@@ -45,29 +31,6 @@ const Searchbar = () => {
             <BiSearchAlt2 className="absolute top-3 right-5 text-xl" />
           </div>
         </form>
-
-        {searchResultData && (
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 px-0 lg:px-10 py-10">
-            {searchResultData.meals.map((meal) => {
-              return (
-                <Link to={`/recipedetail/${meal.idMeal}`} key={meal.idMeal}>
-                  <div>
-                    <div className="w-full">
-                      <img
-                        src={meal.strMealThumb}
-                        alt=""
-                        className="rounded-3xl h-[200px] md:h-[150px] w-full p-3"
-                      />
-                    </div>
-                    <div className="p-3">
-                      <p className="font-semibold">{meal.strMeal}</p>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        )}
       </div>
     </div>
   );
