@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Loading from "./Loading";
 import { BiSearchAlt2 } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Searchbar = () => {
   const [loading, setLoading] = useState(false);
@@ -46,21 +47,23 @@ const Searchbar = () => {
         </form>
 
         {searchResultData && (
-          <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 px-0 lg:px-10 py-10">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 px-0 lg:px-10 py-10">
             {searchResultData.meals.map((meal) => {
               return (
-                <div key={meal.idMeal}>
-                  <div className="w-full">
-                    <img
-                      src={meal.strMealThumb}
-                      alt=""
-                      className="rounded-lg h-[200px] md:h-[150px] w-full p-3"
-                    />
-                  </div>
+                <Link to={`/recipedetail/${meal.idMeal}`} key={meal.idMeal}>
                   <div>
-                    <p className="font-semibold">{meal.strMeal}</p>
+                    <div className="w-full">
+                      <img
+                        src={meal.strMealThumb}
+                        alt=""
+                        className="rounded-3xl h-[200px] md:h-[150px] w-full p-3"
+                      />
+                    </div>
+                    <div className="p-3">
+                      <p className="font-semibold">{meal.strMeal}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

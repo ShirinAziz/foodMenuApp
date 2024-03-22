@@ -40,7 +40,7 @@ const Recipes = () => {
       {recipeCategory?.categories.length > 0 ? (
         <>
           <div
-            id="menu"
+            id="categories"
             className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 px-0 lg:px-10 py-10"
           >
             {recipeCategory?.categories.map((item) => (
