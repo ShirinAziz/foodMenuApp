@@ -9,16 +9,14 @@ import SearchResult from "./components/SearchResult";
 function App() {
   return (
     <>
-      <div className="">
-        <Navbar />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="menu/:categoryName" element={<Menu />} />
-          <Route path="recipedetail/:recipeId" element={<RecipeDetail />} />
-          <Route path="search" element={<SearchResult />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="menu/:categoryName" element={<Menu />} />
+        <Route path="recipedetail/:recipeId" element={<RecipeDetail />} />
+        <Route path="search" element={<SearchResult />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
