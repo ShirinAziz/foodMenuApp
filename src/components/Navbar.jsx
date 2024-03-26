@@ -3,7 +3,7 @@ import Logo from "/public/Logo.jpeg";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "./Button";
-import Searchbar from "./Searchbar";
+import Searchbar from "./SearchBar";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

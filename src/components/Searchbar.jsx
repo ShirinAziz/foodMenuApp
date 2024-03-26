@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
-const Searchbar = () => {
+const SearchBar = () => {
   const [userInput, setUserInput] = useState("");
 
   const navigate = useNavigate();
@@ -34,4 +34,4 @@ const Searchbar = () => {
     </div>
   );
 };
-export default Searchbar;
+export default SearchBar;
