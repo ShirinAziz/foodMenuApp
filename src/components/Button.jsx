@@ -4,7 +4,6 @@ const Button = ({
   isDisabled,
   btnType,
   containerStyle,
-  textStyle,
   title,
   rightIcon,
   handleClick,

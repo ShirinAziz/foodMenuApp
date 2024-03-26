@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Loading from "./Loading";
 import { BiSearchAlt2 } from "react-icons/bi";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Searchbar = () => {
   const [userInput, setUserInput] = useState("");

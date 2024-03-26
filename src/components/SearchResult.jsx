@@ -6,7 +6,7 @@ const SearchResult = () => {
   const [searchParams] = useSearchParams();
   const userInput = searchParams.get("result");
   const [loading, setLoading] = useState(false);
-  const [searchResultData, setSearchResultData] = useState(null); // Använd en separat tillståndsvariabel för att lagra API-svar
+  const [searchResultData, setSearchResultData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,11 +16,11 @@ const SearchResult = () => {
           `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`
         );
         const data = await response.json();
-        setSearchResultData(data); // Uppdatera tillståndet för API-svar
+        setSearchResultData(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
-        setLoading(false); // Återställ laddningstillståndet när fetch-förfrågan är klar
+        setLoading(false);
       }
     };
     fetchData();
