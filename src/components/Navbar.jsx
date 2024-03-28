@@ -3,7 +3,7 @@ import Logo from "/public/Logo.jpeg";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "./Button";
-import Searchbar from "./SearchBar";
+import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <Searchbar />
+        <SearchBar />
         <div className="flex items-center gap-4">
           <ul className="hidden md:flex gap-6">
             <li>
