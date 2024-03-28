@@ -3,8 +3,8 @@ import Logo from "/public/Logo.jpeg";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "./Button";
-import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
